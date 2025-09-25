@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gitana Showroom</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: #f8f8f8;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 20px 0;
+            margin-bottom: 30px;
+        }
+        
+        .logo {
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+            color: #d4af37;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            text-transform: uppercase;
+            font-size: 14px;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: #d4af37;
+        }
+        
+        .hero {
+            height: 400px;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://placehold.co/1200x400') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .hero p {
+            font-size: 18px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .product {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .product:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        
+        .product img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        
+        .product-info {
+            padding: 20px;
+        }
+        
+        .product-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .product-price {
+            color: #d4af37;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: #d4af37;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background-color 0.3s;
+            border: none;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+        
+        .btn:hover {
+            background-color: #b8962e;
+        }
+        
+        .shipping-notice {
+            background-color: #fff3cd;
+            color: #856404;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #ffeaa7;
+            margin: 30px 0;
+            text-align: center;
+            font-weight: 500;
+        }
+        
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        
+        .footer-links a {
+            color: #d4af37;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        
+        .copyright {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #aaa;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+            
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav a {
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">Gitana Showroom</div>
+            <nav>
+                <a href="#">Inicio</a>
+                <a href="#">Productos</a>
+                <a href="#">Novedades</a>
+                <a href="#">Sobre Nosotros</a>
+                <a href="#">Contacto</a>
+            </nav>
+        </div>
+    </header>
+    
+    <div class="hero">
+        <div>
+            <h1>Estilo y Elegancia</h1>
+            <p>Descubre nuestra colección exclusiva de prendas diseñadas para realzar tu belleza natural</p>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="shipping-notice">
+            <p>El medio de envío que habías elegido ya no se encuentra disponible para este carrito. ¡No te preocupes! Podés elegir otro.</p>
+        </div>
+        
+        <h2 style="text-align: center; margin-bottom: 30px; font-size: 28px; color: #333;">Nuestros Productos</h2>
+        
+        <div class="products">
+            <div class="product">
+                <img src="https://placehold.co/300x300" alt="Producto 1">
+                <div class="product-info">
+                    <div class="product-title">Vestido Elegante</div>
+                    <div class="product-price">$1,290.00</div>
+                    <button class="btn">Agregar al carrito</button>
+                </div>
+            </div>
+            
+            <div class="product">
+                <img src="https://placehold.co/300x300" alt="Producto 2">
+                <div class="product-info">
+                    <div class="product-title">Blusa de Seda</div>
+                    <div class="product-price">$890.00</div>
+                    <button class="btn">Agregar al carrito</button>
+                </div>
+            </div>
+            
+            <div class="product">
+                <img src="https://placehold.co/300x300" alt="Producto 3">
+                <div class="product-info">
+                    <div class="product-title">Pantalón Premium</div>
+                    <div class="product-price">$1,050.00</div>
+                    <button class="btn">Agregar al carrito</button>
+                </div>
+            </div>
+            
+            <div class="product">
+                <img src="https://placehold.co/300x300" alt="Producto 4">
+                <div class="product-info">
+                    <div class="product-title">Chaqueta de Cuero</div>
+                    <div class="product-price">$2,490.00</div>
+                    <button class="btn">Agregar al carrito</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <div class="logo" style="color: white; margin-bottom: 20px;">Gitana Showroom</div>
+            <div class="footer-links">
+                <a href="#">Términos y Condiciones</a>
+                <a href="#">Política de Privacidad</a>
+                <a href="#">Envíos y Devoluciones</a>
+                <a href="#">Preguntas Frecuentes</a>
+            </div>
+            <div class="copyright">
+                &copy; 2025 Gitana Showroom. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
