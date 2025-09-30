@@ -54,6 +54,7 @@
             font-size: 14px;
             letter-spacing: 1px;
             transition: color 0.3s;
+            cursor: pointer;
         }
         
         nav a:hover {
@@ -181,6 +182,69 @@
             color: #aaa;
         }
         
+        /* Secciones para cada categoría */
+        .section {
+            padding: 60px 0;
+            background-color: white;
+            margin-bottom: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            color: #333;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: #d4af37;
+            border-radius: 2px;
+        }
+        
+        #inicio {
+            background: linear-gradient(135deg, #fff8e1 0%, #ffffff 100%);
+        }
+        
+        #productos {
+            background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%);
+        }
+        
+        #novedades {
+            background: linear-gradient(135deg, #fff3e0 0%, #ffffff 100%);
+        }
+        
+        #sobre-nosotros {
+            background: linear-gradient(135deg, #e8f5e8 0%, #ffffff 100%);
+        }
+        
+        #contacto {
+            background: linear-gradient(135deg, #f3e5f5 0%, #ffffff 100%);
+        }
+        
+        .section-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 0 20px;
+        }
+        
+        .section-content p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 36px;
@@ -194,6 +258,14 @@
             nav a {
                 margin: 10px 0;
             }
+            
+            .section {
+                padding: 40px 0;
+            }
+            
+            .section-title {
+                font-size: 28px;
+            }
         }
     </style>
 </head>
@@ -202,11 +274,11 @@
         <div class="container">
             <div class="logo">Gitana Showroom</div>
             <nav>
-                <a href="#">Inicio</a>
-                <a href="#">Productos</a>
-                <a href="#">Novedades</a>
-                <a href="#">Sobre Nosotros</a>
-                <a href="#">Contacto</a>
+                <a href="#inicio">Inicio</a>
+                <a href="#productos">Productos</a>
+                <a href="#novedades">Novedades</a>
+                <a href="#sobre-nosotros">Sobre Nosotros</a>
+                <a href="#contacto">Contacto</a>
             </nav>
         </div>
     </header>
@@ -223,60 +295,119 @@
             <p>El medio de envío que habías elegido ya no se encuentra disponible para este carrito. ¡No te preocupes! Podés elegir otro.</p>
         </div>
         
-        <h2 style="text-align: center; margin-bottom: 30px; font-size: 28px; color: #333;">Nuestros Productos</h2>
+        <!-- Sección Inicio -->
+        <section id="inicio" class="section">
+            <h2 class="section-title">Bienvenido a Gitana Showroom</h2>
+            <div class="section-content">
+                <p>En Gitana Showroom, creemos que la moda es una forma de expresión personal. Nuestra misión es ofrecerte prendas de alta calidad que combinen estilo, comodidad y elegancia para que te sientas segura y radiante en cada ocasión.</p>
+                <p>Explora nuestras colecciones cuidadosamente seleccionadas y descubre piezas únicas que se convertirán en tus favoritas.</p>
+            </div>
+        </section>
         
-        <div class="products">
-            <div class="product">
-                <img src="https://placehold.co/300x300" alt="Producto 1">
-                <div class="product-info">
-                    <div class="product-title">Vestido Elegante</div>
-                    <div class="product-price">$1,290.00</div>
-                    <button class="btn">Agregar al carrito</button>
+        <!-- Sección Productos -->
+        <section id="productos" class="section">
+            <h2 class="section-title">Nuestros Productos</h2>
+            <div class="products">
+                <div class="product">
+                    <img src="https://placehold.co/300x300" alt="Producto 1">
+                    <div class="product-info">
+                        <div class="product-title">Vestido Elegante</div>
+                        <div class="product-price">$1,290.00</div>
+                        <button class="btn">Agregar al carrito</button>
+                    </div>
+                </div>
+                
+                <div class="product">
+                    <img src="https://placehold.co/300x300" alt="Producto 2">
+                    <div class="product-info">
+                        <div class="product-title">Blusa de Seda</div>
+                        <div class="product-price">$890.00</div>
+                        <button class="btn">Agregar al carrito</button>
+                    </div>
+                </div>
+                
+                <div class="product">
+                    <img src="https://placehold.co/300x300" alt="Producto 3">
+                    <div class="product-info">
+                        <div class="product-title">Pantalón Premium</div>
+                        <div class="product-price">$1,050.00</div>
+                        <button class="btn">Agregar al carrito</button>
+                    </div>
+                </div>
+                
+                <div class="product">
+                    <img src="https://placehold.co/300x300" alt="Producto 4">
+                    <div class="product-info">
+                        <div class="product-title">Chaqueta de Cuero</div>
+                        <div class="product-price">$2,490.00</div>
+                        <button class="btn">Agregar al carrito</button>
+                    </div>
                 </div>
             </div>
-            
-            <div class="product">
-                <img src="https://placehold.co/300x300" alt="Producto 2">
-                <div class="product-info">
-                    <div class="product-title">Blusa de Seda</div>
-                    <div class="product-price">$890.00</div>
-                    <button class="btn">Agregar al carrito</button>
-                </div>
+        </section>
+        
+        <!-- Sección Novedades -->
+        <section id="novedades" class="section">
+            <h2 class="section-title">Novedades</h2>
+            <div class="section-content">
+                <p>¡Descubre nuestras últimas incorporaciones! Cada temporada traemos nuevas piezas diseñadas con las últimas tendencias de la moda internacional, manteniendo siempre nuestro sello distintivo de calidad y elegancia.</p>
+                <p>Nuestras novedades incluyen colecciones exclusivas, ediciones limitadas y colaboraciones especiales con diseñadores emergentes.</p>
             </div>
-            
-            <div class="product">
-                <img src="https://placehold.co/300x300" alt="Producto 3">
-                <div class="product-info">
-                    <div class="product-title">Pantalón Premium</div>
-                    <div class="product-price">$1,050.00</div>
-                    <button class="btn">Agregar al carrito</button>
-                </div>
+        </section>
+        
+        <!-- Sección Sobre Nosotros -->
+        <section id="sobre-nosotros" class="section">
+            <h2 class="section-title">Sobre Nosotros</h2>
+            <div class="section-content">
+                <p>Fundado en 2015, Gitana Showroom ha crecido hasta convertirse en uno de los destinos favoritos para mujeres que buscan prendas únicas y de alta calidad. Nuestro equipo está compuesto por apasionados de la moda que seleccionan cuidadosamente cada pieza.</p>
+                <p>Trabajamos directamente con diseñadores locales e internacionales para ofrecerte una experiencia de compra auténtica y memorable.</p>
             </div>
-            
-            <div class="product">
-                <img src="https://placehold.co/300x300" alt="Producto 4">
-                <div class="product-info">
-                    <div class="product-title">Chaqueta de Cuero</div>
-                    <div class="product-price">$2,490.00</div>
-                    <button class="btn">Agregar al carrito</button>
-                </div>
+        </section>
+        
+        <!-- Sección Contacto -->
+        <section id="contacto" class="section">
+            <h2 class="section-title">Contacto</h2>
+            <div class="section-content">
+                <p>¿Tienes preguntas sobre nuestros productos o necesitas asistencia con tu pedido? Estamos aquí para ayudarte.</p>
+                <p><strong>Email:</strong> contacto@gitanashowroom.com</p>
+                <p><strong>Teléfono:</strong> +54 11 1234-5678</p>
+                <p><strong>Dirección:</strong> Av. Santa Fe 1234, Buenos Aires, Argentina</p>
+                <p>Nuestro horario de atención es de lunes a viernes de 9:00 a 18:00 hs.</p>
             </div>
-        </div>
+        </section>
     </div>
     
     <footer>
         <div class="container">
             <div class="logo" style="color: white; margin-bottom: 20px;">Gitana Showroom</div>
             <div class="footer-links">
-                <a href="#">Términos y Condiciones</a>
-                <a href="#">Política de Privacidad</a>
-                <a href="#">Envíos y Devoluciones</a>
-                <a href="#">Preguntas Frecuentes</a>
+                <a href="#inicio">Inicio</a>
+                <a href="#productos">Productos</a>
+                <a href="#novedades">Novedades</a>
+                <a href="#sobre-nosotros">Sobre Nosotros</a>
+                <a href="#contacto">Contacto</a>
             </div>
             <div class="copyright">
                 &copy; 2025 Gitana Showroom. Todos los derechos reservados.
             </div>
         </div>
     </footer>
+
+    <script>
+        // Smooth scrolling para los enlaces de navegación
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
